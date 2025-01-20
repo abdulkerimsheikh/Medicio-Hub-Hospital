@@ -1,0 +1,24 @@
+addpatient (1) --- (M) appointment
+A patient can have many appointments.
+
+customuser (M) --- (M) auth_group
+Users can belong to multiple groups, and groups can have multiple users.
+
+customuser (M) --- (M) auth_permission
+Users can have multiple permissions.
+
+customuser_groups: Linking table between customuser and auth_group.
+
+customuser_user_permissions: Linking table between customuser and auth_permission.
+
+doctorreg (1) --- (M) appointment
+A doctor can have many appointments.
+
+doctorreg (M) --- (M) specialization
+Doctors can have many specializations, and specializations can apply to many doctors.
+
+addpatient (1) --- (M) medicalhistory
+A patient can have many medical history records.
+
+patientreg (1) --- (M) appointment
+A patient can make multiple appointments.

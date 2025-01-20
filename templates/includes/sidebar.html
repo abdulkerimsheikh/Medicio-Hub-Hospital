@@ -1,0 +1,173 @@
+{% load static %}
+<div class="sidebar" data-background-color="dark">
+   <div class="sidebar-logo">
+       <!-- Logo Header -->
+       <div class="logo-header" data-background-color="dark">
+           <a href="{% url 'admin_home' %}" class="logo">
+               <img src="{% static 'panel/assets/img/kaiadmin/logo_light.svg'%}" alt="navbar brand" class="navbar-brand" height="20" />
+           </a>
+           <div class="nav-toggle">
+               <button class="btn btn-toggle toggle-sidebar">
+                   <i class="gg-menu-right"></i>
+               </button>
+               <button class="btn btn-toggle sidenav-toggler">
+                   <i class="gg-menu-left"></i>
+               </button>
+           </div>
+           <button class="topbar-toggler more">
+               <i class="gg-more-vertical-alt"></i>
+           </button>
+       </div>
+       <!-- End Logo Header -->
+   </div>
+
+   <div class="sidebar-wrapper scrollbar scrollbar-inner">
+       <div class="sidebar-content">
+           <ul class="nav nav-secondary">
+               <li class="nav-item active">
+                   <a data-bs-toggle="collapse" href="{% url 'admin_home' %}" class="collapsed" aria-expanded="false">
+                       <i class="fas fa-home"></i>
+                       <p>Dashboard</p>
+                   </a>
+               </li>
+               <li class="nav-section">
+                   <span class="sidebar-mini-icon">
+                       <i class="fa fa-ellipsis-h"></i>
+                   </span>
+                   <h4 class="text-section">Main Menu</h4>
+               </li>
+
+               {% if user.user_type == '1' %}
+                   <li class="nav-item">
+                       <a href="{% url 'admin_home' %}">
+                           <i class="fas fa-file"></i>
+                           <p>Dashboard</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'add_specilizations' %}">
+                           <i class="fas fa-file"></i>
+                           <p>Add Specialization</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'manage_specilizations' %}">
+                           <i class="fas fa-file"></i>
+                           <p>Manage Specialization</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'viewdoctorlist' %}">
+                           <i class="fas fa-file"></i>
+                           <p>Doctor List</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'regusers' %}">
+                           <i class="fas fa-file"></i>
+                           <p>Appointment</p>
+                       </a>
+                   </li>
+
+
+
+
+
+               {% elif user.user_type == '2' %}
+                   <li class="nav-item">
+                       <a href="{% url 'doctor_home' %}">
+                           <i class="fa fa-file"></i>
+                           <p>Dashboard</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'patientnewappointment' %}">
+                           <i class="fas fa-chalkboard-teacher"></i>
+                           <p>New Appointment</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'patientapprovedappointment' %}">
+                           <i class="fas fa-chalkboard-teacher"></i>
+                           <p>Approved Appointment</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'patientcancelledappointment' %}">
+                           <i class="fas fa-chalkboard-teacher"></i>
+                           <p>Cancelled Appointment</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'view_appointment' %}">
+                           <i class="fas fa-chalkboard-teacher"></i>
+                           <p>All Appointment</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'add_patient' %}">
+                           <i class="fas fa-chalkboard-teacher"></i>
+                           <p>Add Patient</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'manage_patient' %}">
+                           <i class="fas fa-chalkboard-teacher"></i>
+                           <p>Manage Patient</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'search_appointment' %}">
+                           <i class="fas fa-search"></i>
+                           <p>Search Appointment</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'search_patient' %}">
+                           <i class="fas fa-search"></i>
+                           <p>Search Patient</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'between_date_report' %}">
+                           <i class="fas fa-file"></i>
+                           <p>Appointment Report</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'between_date_patient_report' %}">
+                           <i class="fas fa-file"></i>
+                           <p>Patient Report</p>
+                       </a>
+                   </li>
+
+                   
+               
+               {% else %}
+                   <li class="nav-item">
+                       <a href="{% url 'userhome' %}">
+                           <i class="fa fa-file"></i>
+                           <p>Dashboard</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'patientappointment' %}">
+                           <i class="fas fa-edit"></i>
+                           <p>Book Appointment</p>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="{% url 'view_appointment_history' %}">
+                           <i class="fas fa-file"></i>
+                           <p>Appointment History</p>
+                       </a>
+                   </li>
+
+                
+                   
+                   
+               {% endif %}
+           </ul>
+       </div>
+   </div>
+</div>

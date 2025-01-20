@@ -1,0 +1,76 @@
+{% extends 'userbase.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+   <div class="login-container">
+      <h1 class="text-center mb-4">Doctor Sign Up</h1>
+      <p class="text-center mb-4 text-muted">Access to our dashboard</p>
+      <form action="" method="POST" enctype="multipart/form-data" class="form-style">
+         {% if messages %}
+         {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+               {{ message }}
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+         {% endfor %}
+         {% endif %}
+         {% csrf_token %}
+         <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input id="first_name" type="text" class="form-control" placeholder="First Name" name="first_name" required="true">
+         </div>
+         <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input id="last_name" type="text" class="form-control" placeholder="Last Name" name="last_name" required="true">
+         </div>
+         <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" class="form-control" placeholder="Email" name="email" required="true">
+         </div>
+         <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" type="text" class="form-control" placeholder="Enter Username" name="username" required="true">
+         </div>
+         <div class="form-group">
+            <label for="mobno">Mobile Number</label>
+            <input id="mobno" type="text" class="form-control" placeholder="Mobile" name="mobno" maxlength="10" pattern="[0-9]+" required="true">
+         </div>
+         <div class="form-group">
+            <label for="fees">Fees</label>
+            <input id="fees" type="text" class="form-control" placeholder="Enter Your Fees" name="fees" required="true">
+         </div>
+         <div class="form-group">
+            <label for="specialization_id">Specialization</label>
+            <select name="specialization_id" id="specialization_id" class="form-control" required="true">
+               <option value="">Choose Specialization</option>
+               {% for i in specialization %}
+                  <option value="{{ i.id }}">{{ i.sname }}</option>
+               {% endfor %}
+            </select>
+         </div>
+         <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" class="form-control" placeholder="Password" name="password" required="true">
+         </div>
+
+         <div class="form-group">
+            <label for="password">Enter Your Picture</label>
+            <input id="pic" type="file" class="form-control" name="pic" required="true">
+        </div>
+
+
+         <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">Register</button>
+         </div>
+      </form>
+      <div class="text-center">
+         <a href="{% url 'doctorlogin' %}" class="text-muted">Already have an account?</a>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+

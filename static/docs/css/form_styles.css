@@ -1,0 +1,94 @@
+/* Style the entire page to center the form */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ /* Make sure the form is centered both horizontally and vertically */
+ .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+ }
+ 
+ /* Style the form container with shadow, padding, and a rounded border */
+ .login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+ }
+ 
+ /* Make the form inputs and buttons look sleek */
+ .form-style .form-control {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+ }
+ 
+ /* When focusing on inputs, change their border color */
+ .form-style .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+ }
+ 
+ /* Style the submit button */
+ .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+ }
+ 
+ .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+ }
+ 
+ /* Style the form labels */
+ .form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 5px;
+ }
+ 
+ /* Add some space between text links */
+ .text-muted {
+    font-size: 14px;
+ }
+ 
+ .text-center a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+ }
+ 
+ .text-center a:hover {
+    text-decoration: underline;
+ }
+ 
+ /* Style the alert messages */
+ .alert {
+    font-size: 14px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+ }
+ 
+ /* Space out the elements */
+ .mb-4 {
+    margin-bottom: 25px !important;
+ }
+ 
