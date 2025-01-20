@@ -9,7 +9,6 @@ Medicio Hub Hospital is a web-based application designed to streamline hospital 
 - **Patient Management**: Easily manage patient records, appointments, and medical histories.
 - **Doctor Management**: Manage doctor profiles, schedules, and specialties.
 - **Appointment Booking**: Simplified appointment scheduling for patients.
-- **Billing System**: Generate and manage bills efficiently.
 - **Admin Dashboard**: Comprehensive dashboard for managing hospital operations.
 - **Secure Authentication**: Ensure user data security with robust authentication mechanisms.
 
@@ -42,7 +41,7 @@ Medicio Hub Hospital is a web-based application designed to streamline hospital 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/medicio-hub-hospital.git
+   git clone https://github.com/abdulkerimsheikh/medicio-hub-hospital.git
    cd medicio-hub-hospital
    ```
 
@@ -69,7 +68,7 @@ Medicio Hub Hospital is a web-based application designed to streamline hospital 
              'USER': 'your_username',
              'PASSWORD': 'your_password',
              'HOST': 'localhost',
-             'PORT': '3306',
+             'PORT': '3307',
          }
      }
      ```
